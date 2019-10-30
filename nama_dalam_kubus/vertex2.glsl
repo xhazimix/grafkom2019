@@ -22,10 +22,10 @@ void main() {
   );
 
   mat4 translation = mat4(
-    1.0, 0.0, 0.0, translate.x,
-    0.0, 1.0, 0.0, translate.y,
-    0.0, 0.0, 1.0, translate.z,
-    0.0, 0.0, 0.0, 1.0
+    1, 0, 0, translate.x,
+    0, 1, 0, translate.y,
+    0, 0, 1, translate.z,
+    0, 0, 0, 1
   );
 
   vec3 angle = radians(theta);
@@ -58,17 +58,17 @@ void main() {
   vec4 middle_v = middle_x;
 
   mat4 scalation = mat4(
-    0.2, 0.0, 0.0, 0.0,
-    0.0, 0.2, 0.0, 0.0,
-    0.0, 0.0, 1.0, 0.0,
-    0.0, 0.0, 0.0, 1.0
+    0.2,  0,    0,  0,
+    0,    0.2,  0,  0,
+    0,    0,    1,  0,
+    0,    0,    0,  1.
   );
 
   mat4 pseudo_rotate = mat4(
-    scale, 0.0, 0.0, -(middle_v.x)*scale + middle_v.x,
-    0.0, 1.0, 0.0, 0.0,
-    0.0, 0.0, 1.0, 0.0,
-    0.0, 0.0, 0.0, 1.0
+    scale,  0, 0, -(middle_v.x)*scale + middle_v.x,
+    0,      1, 0, 0,
+    0,      0, 1, 0,
+    0,      0, 0, 1
   );
 
   vec4 final_position = rotated_position * translation * pseudo_rotate * scalation;
