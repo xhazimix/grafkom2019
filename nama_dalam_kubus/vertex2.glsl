@@ -65,7 +65,7 @@ void main() {
   );
 
   mat4 pseudo_rotate = mat4(
-    scale, 0.0, 0.0, -(middle_v.x)*scalation + middle_v.x,
+    scale, 0.0, 0.0, -(middle_v.x)*scale + middle_v.x,
     0.0, 1.0, 0.0, 0.0,
     0.0, 0.0, 1.0, 0.0,
     0.0, 0.0, 0.0, 1.0
