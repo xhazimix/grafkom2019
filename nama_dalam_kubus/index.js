@@ -180,7 +180,7 @@
     function initBuffers(mode, vertices, program){
       var n;
       if(mode){
-        n = vertices.length;
+        n = vertices.length/5;
       } else {
         n = vertices.length/6;
       }
