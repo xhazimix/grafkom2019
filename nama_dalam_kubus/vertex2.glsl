@@ -6,7 +6,7 @@ varying vec3 fColor;
 uniform vec3 theta;
 uniform float scale;
 uniform vec3 translate;
-uniform float middle_coordinate;
+uniform float middle_coordinates;
 uniform mat4 projection;
 uniform mat4 view;
 
