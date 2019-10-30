@@ -43,5 +43,5 @@ void main() {
     0.0, 0.0, 0.0, 1.0
   );
 
-  gl_Position = projection * view * translate * rx * ry *rz * vec(vPosition, 1.0);
+  gl_Position = projection * view * translate * rz * ry * rx * vec(vPosition, 1.0);
 }
