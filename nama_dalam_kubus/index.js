@@ -118,7 +118,7 @@
       +0.325, -0.5,   1.0, 0.0, 0.0,
     ];
 
-    var triangleVertices = new Float32Arrat([
+    var triangleVertices = new Float32Array([
       // x, y,        r, g, b
       +0.2, +0.3,     1.0, 0.0, 0.0, 
       0.0, -0.2,      1.0, 0.0, 0.0, //kiri
