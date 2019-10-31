@@ -23,10 +23,10 @@ void main() {
   float lightIntensity = max(dot(lightDirection, normal), 0.0); 
 
   // Menghitung nilai diffuse dari interaksi cahaya dan material
-  vec3 diffuse = lightColor * vColor.rgb * lightIntensity;
+  vec3 diffuse = lightColor * vColor * lightIntensity;
 
   // Menghitung nilai ambient dari verteks
   vec3 ambient = ambientColor * vColors;
 
-  fColor = diffuse;
+  fColor = diffuse + ambient;
 }
