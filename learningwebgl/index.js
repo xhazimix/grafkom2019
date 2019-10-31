@@ -111,8 +111,8 @@
     var thetaSpeed = 0.0;
 
     function onKeyDown(event) {
-      if (event.keyCode == 173) thetaSpeed -= 0.005;      // tombol '-'
-      else if (event.keyCode == 61) thetaSpeed += 0.005; // tombol '='
+      if (event.keyCode == 189) thetaSpeed -= 0.005;      // tombol '-'
+      else if (event.keyCode == 187) thetaSpeed += 0.005; // tombol '='
       else if (event.keyCode == 48) thetaSpeed = 0;       // tombol '0'
     }
     document.addEventListener('keydown', onKeyDown);
@@ -145,9 +145,8 @@
     var lightDirection = glMatrix.vec3.fromValues(0.5, 4.0, 3.0);
     gl.uniform3fv(lightColorLoc, lightColor);
     gl.uniform3fv(lightDirectionLoc, lightDirection);
-
     var ambientColorLoc = gl.getUniformLocation(program, 'ambientColor');
-    gl.uniform3fv(ambientColorLoc, glMatrix.vec3.fromValues(0.5, 0.5, 0.5)); //semua bagian kubus dapat 50% cahaya
+    gl.uniform3fv(ambientColorLoc, glMatrix.vec3.fromValues(0.5, 0.5, 0.5));
 
     var nmLoc = gl.getUniformLocation(program, 'normalMatrix');
 

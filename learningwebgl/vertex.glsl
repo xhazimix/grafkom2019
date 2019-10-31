@@ -26,7 +26,7 @@ void main() {
   vec3 diffuse = lightColor * vColor * lightIntensity;
 
   // Menghitung nilai ambient dari verteks
-  vec3 ambient = ambientColor * vColors;
+  vec3 ambient = ambientColor * vColor;
 
   fColor = diffuse + ambient;
 }
