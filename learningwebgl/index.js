@@ -111,8 +111,8 @@
     var thetaSpeed = 0.0;
 
     function onKeyDown(event) {
-      if (event.keyCode == 189) thetaSpeed -= 0.005;      // tombol '-'
-      else if (event.keyCode == 187) thetaSpeed += 0.005; // tombol '='
+      if (event.keyCode == 173) thetaSpeed -= 0.005;      // tombol '-'
+      else if (event.keyCode == 161) thetaSpeed += 0.005; // tombol '='
       else if (event.keyCode == 48) thetaSpeed = 0;       // tombol '0'
     }
     document.addEventListener('keydown', onKeyDown);
