@@ -25,8 +25,8 @@ void main() {
   // Menghitung nilai diffuse dari interaksi cahaya dan material
   vec3 diffuse = fColor * lightIntensity;
 
-  vec3 reflection = normalize(2 * dot(normal, lightDirection) * normal - lightDirection);
-  vec3 to_camera = normalize(-1 * fPosition);
+  vec3 reflection = normalize(2.0 * dot(normal, lightDirection) * normal - lightDirection);
+  vec3 to_camera = normalize(-1.0 * fPosition);
 
   lightIntensity = clamp(dot(reflection, to_camera), 0.0, 1.0);
   lightIntensity = pow(lightIntensity, shininess);
@@ -35,11 +35,11 @@ void main() {
   vec3 specular;
   if (lightIntensity > 0.0){
     specular = lightColor * lightIntensity;
-    diffuse = diffuse * (1 - lightIntensity);
+    diffuse = diffuse * (1.0 - lightIntensity);
   }else{
     specular = vec3(0.0, 1.0, 0.0);
   }
 
-  gl_FragColor = vec4(0.51, 0.17, 0.14, 0.82);
+  gl_FragColor = vec4(0.0, 0.0, 0.0, 1.0);
 }
 

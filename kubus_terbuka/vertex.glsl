@@ -9,7 +9,7 @@ varying vec3 fPosition;
 varying vec3 fNormal;
 
 uniform mat4 modelMatrix;
-uniform mat4 viewMatrixMatrix;
+uniform mat4 viewMatrix;
 uniform mat4 perspectiveMatrix;
 
 uniform mat3 normalMatrix; // Membantu transformasi vektor normal

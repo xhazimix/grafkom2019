@@ -27,13 +27,13 @@ void main() {
   float specular = 0.0;
   if (lightIntensity > 0.0){
     // Melihat vektor
-    vec3 viewMatrixVec = vec3(0.0, 0.0, 1.0);
+    vec3 viewVec = vec3(0.0, 0.0, 1.0);
 
     // vector reflektif
     vec3 reflectVec = reflect(-lightDirection, normal);
 
     // Inisialisasi specularFactor 
-    float specularFactor = max(dot(reflectVec, viewMatrixVec), 0.0);
+    float specularFactor = max(dot(reflectVec, viewVec), 0.0);
     specular = pow(specularFactor, specularPower);
   }
 
